@@ -1,0 +1,88 @@
+.detail-page
+	padding: 20px
+	height: 880px
+	width: 80%
+	margin: 50px auto
+
+	&__absolute
+		position: absolute
+		width: 80%
+
+	&__thumbnail
+		width: 320px
+		border-radius: 3px
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .28)
+		position: relative
+		left: 50px
+		z-index: 20
+
+	&__book-button
+		display: inline-block
+		text-align: center
+		position: relative
+		top: 40px
+		right: 270px
+		padding: 10px
+		background-color: #ecf0f1
+		border: 1px solid #ecf0f1
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+		text-transform: uppercase
+		color: #27ae60
+		cursor: pointer
+		border-radius: 3px
+		width: 320px
+		z-index: 20
+		transition: all 150ms ease-in-out
+
+		&:hover
+			transform: scale(1.025)
+
+	&__description
+		height: 480px
+		background-color: #2ecc71
+		position: relative
+		top: -190px
+		border-radius: 3px
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .28)
+
+		&-content
+			position: absolute
+			margin-left: 390px
+			margin-top: -50px
+
+			& .detail-page__name
+				position: relative
+				font-size: 1.8rem
+
+			& .detail-page__tags
+				margin-top: 25px
+
+				li
+					font-size: .75rem
+					margin-right: 10px
+					color: #fafafa
+					background-color: #34495e
+					padding: 6px 14px
+					border-radius: 15px
+					box-shadow: 0 2px 3px rgba(0, 0, 0, .02)
+
+					&:last-child
+						margin-left: 0
+
+			& .detail-page__release-date
+				color: #fafafa
+				margin-top: 10px
+				font-size: .9rem
+
+				span
+					color: #fafafa
+
+			& .detail-page__info
+				padding: 10px
+				margin-top: 10px
+				margin-right: 20px
+				text-align: justify
+
+				p
+					line-height: 1.6rem
+					color: #fafafa

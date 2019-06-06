@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import HomeScreen from './screens/Home';
+import DetailScreen from './screens/Detail';
+import BookScreen from './screens/Book';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import './assets/sass/app.sass';
+
+ReactDOM.render(
+	<Router>
+		<Switch>
+			<Route path='/' component={ HomeScreen } exact />
+			<Route path='/book/:slug/:type' component={ DetailScreen } exact />
+			<Route path='/book/slot/:slug/:type' component={ BookScreen } exact />
+		</Switch>
+	</Router>,
+	document.getElementById('root')
+);

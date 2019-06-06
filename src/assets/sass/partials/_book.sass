@@ -1,0 +1,171 @@
+.slots-by-date
+	width: 80%
+	margin: 0 auto
+	margin-top: 80px
+	background-color: #2ecc71
+	padding: 15px
+
+	li
+		cursor: pointer
+		padding: 5px 20px
+		border: 2px solid #fafafa
+		margin-left: 25px
+
+		&.selected
+			background-color: #fafafa
+
+			.slots-by-date__date,
+			.slots-by-date__day
+				color: #2ecc71
+
+		&:first-child
+			margin-left: 0
+
+	&__date
+		color: #fafafa
+		font-size: 1.2rem
+		font-weight: 900
+		text-align: center
+		margin-bottom: 5px
+
+	&__day
+		color: #fafafa
+		font-size: .9rem
+
+.theaters
+	width: 80%
+	margin: 0 auto
+	margin-top: 20px
+
+	&__item
+		background-color: rgba(0, 0, 0, .026)
+		padding: 15px
+		margin-bottom: 16px
+		border-radius: 3px
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .04)
+
+		&:last-child
+			border-bottom: 0
+
+		&-name
+			color: #888
+			padding: 10px
+			font-weight: 700
+			font-size: .9rem
+
+			&:hover
+				text-decoration: underline
+				cursor: pointer
+
+		&-slots
+			margin-left: 50px
+
+			& > li
+				margin-left: 20px
+				border: 2px solid #eee
+				padding: 10px
+				border-radius: 3px
+				font-size: .85rem
+				cursor: pointer
+				background-color: #fafafa
+
+				&:hover > .theaters__item-slots__absolute .theaters__item-slots__tooltip
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+
+				& .theaters__item-slots__absolute
+					position: absolute
+
+				& .theaters__item-slots__tooltip
+					display: none
+					position: relative
+					border: 2px solid #eee
+					padding: 6px
+					top: -90px
+					left: -80px
+					background-color: #fafafa
+
+					&-item
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						flex-direction: column
+						margin-left: 10px
+
+						&:first-child
+							margin-left: 0
+
+						&__price,
+						&__type,
+						&__availability
+							padding: 2px
+							text-align: center
+
+				&:first-child
+					margin-left: 0
+
+.tickets-picker-modal
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9999
+	background-color: rgba(0, 0, 0, .35)
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&__content
+		position: relative
+		background-color: #fafafa
+		padding: 80px
+		border-radius: 3px
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .15)
+
+	&__close
+		cursor: pointer
+		position: absolute
+		top: -40px
+		padding: 10px
+		right: -20px
+		color: #fafafa
+		font-size: 1.6rem
+
+	&__title
+		text-align: center
+		padding: 20px
+		font-size: 1.4rem
+		font-weight: 900
+		border-bottom: 1px solid #eee
+
+	&__tickets
+		justify-content: center
+		margin-top: 40px
+
+		& li
+			border: 2px solid #eee
+			margin-left: 15px
+			width: 50px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			cursor: pointer
+			border-radius: 25px
+			color: #888
+
+			&:hover
+				border-color: #3498db
+				color: #333
+
+			&:first-child
+				margin-left: 0
